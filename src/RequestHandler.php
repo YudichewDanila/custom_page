@@ -6,7 +6,7 @@ class RequestHandler{
     
 
     public function getHeaders() {
-        $headers = getallheaders();
+        $headers = apache_request_headers();
         foreach ($headers as $header => $value) {
             echo "$header: $value\n";
         }
